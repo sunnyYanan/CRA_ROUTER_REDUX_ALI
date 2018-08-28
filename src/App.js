@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Button } from 'antd';
 import { Link } from 'react-router-dom';
-import request from './utils/Request';
+import {HttpGet} from './utils/Request';
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class App extends Component {
     this.fetch = this.fetch.bind(this);
   }
   fetch() {
-    request('http://3hours.tmall.net/getPoplayer.json').then(response =>
+    HttpGet('http://3hours.tmall.net/getPoplayer.json').then(response =>
       console.log(response)
     );
   }
