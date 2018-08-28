@@ -1,0 +1,12 @@
+{
+  "assets": {
+    "type": "command",
+    "command": {
+      "cmd": [
+        "tnpm install",
+        "node build && tnpm run build",
+        "mv ./build $BUILD_DEST"
+      ]
+    }
+  }
+}
